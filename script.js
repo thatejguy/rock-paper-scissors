@@ -1,6 +1,6 @@
 // randomly returns either rock, paper, or scissors
 function getComputerChoice() {
-    let values = ["Rock", "Paper", "Scissors"];
+    let values = ["rock", "paper", "scissors"];
     let valuesToTest = values[Math.floor(Math.random() * values.length)];
     return valuesToTest;
 }
@@ -40,9 +40,34 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+//shows the winner
+function winner() {
+    if (aPlayerScore > aComputerScore) {
+        console.log("Nice job you beat the computer!");
+    } else if (aPlayerScore < aComputerScore) {
+        console.log("Wow the computer really destroyed you huh? Git gud");
+    } else {
+        "You tied! Interesting...";
+    }
+}
+
+//put computer choice in variable
+computerSelection = getComputerChoice();
+playerSelection = prompt("Enter", '');
+
+//plays rock paper scissors
+function game() {
+    console.log(playRound(playerSelection, computerSelection));
+    console.log(`Your score: ${aPlayerScore}`);
+    console.log(`Computer score: ${aComputerScore}`);
+
+    winner();
+}
+
+//calls the game 5 times
+game();
+
+
 
 
 
