@@ -10,7 +10,7 @@ function playRound(playerSelection, computerSelection) {
 
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
-    
+
     if (playerSelection === "rock" && computerSelection === "rock") {
         return "You tied!";
     } else if (playerSelection === "rock" && computerSelection === "paper") {
@@ -34,6 +34,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+//puts random choice into computer selection
 const computerSelection = getComputerChoice();
 
 //plays 5 rounds of rock paper scissors
@@ -60,5 +61,6 @@ function game() {
 
 }
 
+//plays the game
 game();
 
