@@ -45,26 +45,25 @@ function winner() {
     if (aPlayerScore > aComputerScore) {
         console.log("Nice job you beat the computer!");
     } else if (aPlayerScore < aComputerScore) {
-        console.log("Wow the computer really destroyed you huh? Git gud");
+        console.log("Wow the computer really destroyed you huh? Git gud!");
     } else {
-        "You tied! Interesting...";
+        console.log("You tied! Interesting...");
     }
 }
 
-//put computer choice in variable
-computerSelection = getComputerChoice();
-playerSelection = prompt("Enter", '');
-
-//plays rock paper scissors
+//plays rock paper scissors 5 times
 function game() {
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(`Your score: ${aPlayerScore}`);
-    console.log(`Computer score: ${aComputerScore}`);
-
+    for (i = 0; i < 5; i++) {
+        playerSelection = prompt("Please enter either Rock, Paper, or Scissors: ", '');
+        computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection));
+        console.log(`Your score: ${aPlayerScore}`);
+        console.log(`Computer score: ${aComputerScore}`);
+    }
     winner();
 }
 
-//calls the game 5 times
+//calls the game 
 game();
 
 
