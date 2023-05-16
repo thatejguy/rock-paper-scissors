@@ -13,38 +13,38 @@ let computerScore = 0;
 function playRound(playerSelection, computerSelection) {
     playerSelection.toLowerCase();
     if (playerSelection === 'rock' && computerSelection === 'Scissors') {
+        playerScore += 1;
         return 'You win! Rock beats Scissors!';
-        playerScore += 1;
     } else if (playerSelection === 'paper' && computerSelection === 'Rock') {
+        playerScore += 1;
         return 'You win! Paper beats Rock!';
-        playerScore += 1;
     } else if (playerSelection === 'scissors' && computerSelection === 'Paper') {
+        playerScore += 1;
         return 'You win! Scissors beats Paper!';
-        playerScore += 1;
     } else if (computerSelection === 'Rock' && playerSelection === 'scissors') {
+        computerScore += 1;
         return 'You lose! Rock beats Scissors!';
-        computerScore += 1;
     } else if (computerSelection === 'Paper' && playerSelection === 'rock') {
+        computerScore += 1;
         return 'You lose! Paper beats Rock!';
-        computerScore += 1;
     } else if (computerSelection === 'Scissors' && playerSelection === 'paper') {
-        return 'You lose! Scissors beats Paper!';
         computerScore += 1;
+        return 'You lose! Scissors beats Paper!';
     } else {
-        return 'You tied!';
         playerScore += 1;
         computerScore += 1;
+        return 'You tied!';
     }
 }
 
 //Keeps track of the winner
 function winner() {
     if (playerScore > computerScore) {
-        return "You win! You destroyed the computer!";
+        console.log("You win! Absolutely rolled the computa huh?");
     } else if (computerScore > playerScore) {
-        return 'You lose! The computer really destroyed you huh?';
+        console.log('You lose! Computa rekt you huh? Trash!');
     } else {
-        return 'You tied!';
+        console.log('You tied! Ehhhhhh?!');
     }
 }
 
@@ -54,8 +54,10 @@ function game() {
         playerSelection = prompt("Please enter Rock, Paper, or Scissors: ", '');
         computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
+        console.log(`Your score: ${playerScore}`);
+        console.log(`Computer score: ${computerScore}`);
     }
-    console.log(winner());
+    winner()
 }
 
 //calls the game
