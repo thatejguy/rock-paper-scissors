@@ -48,6 +48,19 @@ function winner() {
     }
 }
 
+//plays the game 5 times
+function game() {
+    for (let i = 0; i < 5; i++) {
+        playerSelection = prompt("Please enter Rock, Paper, or Scissors: ", '');
+        computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection));
+    }
+    console.log(winner());
+}
+
+//calls the game
+game();
+
 
 
 
