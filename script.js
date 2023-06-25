@@ -48,6 +48,17 @@ function winner() {
     }
 }
 
-//constant variables
-const playerSelection = prompt('Please enter either Rock, Paper, or Scissors: ');
-const computerSelection = getComputerChoice();
+//plays the game 5 times
+function game() {
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = prompt('Please enter either Rock, Paper, or Scissors: ');
+        const computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection));
+        console.log(`Your Score: ${aPlayerScore}`);
+        console.log(`Computer Score: ${aComputerScore}`);
+    }
+    winner();
+}
+
+//calls the game
+game();
