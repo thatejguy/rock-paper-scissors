@@ -37,3 +37,17 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+//keeps track of the winner
+function winner() {
+    if (aPlayerScore > aComputerScore) {
+        console.log("You win! You destroyed the computer huh?");
+    } else if (aComputerScore > aPlayerScore) {
+        console.log("You lose! The computer wrecked you huh?");
+    } else {
+        console.log("You both tied!");
+    }
+}
+
+//constant variables
+const playerSelection = prompt('Please enter either Rock, Paper, or Scissors: ');
+const computerSelection = getComputerChoice();
