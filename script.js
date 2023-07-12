@@ -15,18 +15,22 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === 'rock' && computerSelection === 'Scissors') {
         playerScore += 1;
         alert('You picked rock, Computer picked scissors. You win!');
+        return 'You win! Rock beats Scissors!'
     } else if (playerSelection === 'paper' && computerSelection === 'Rock') {
         playerScore += 1;
-        alert('You picked paper, Computer picked rock. You win!')
+        alert('You picked paper, Computer picked rock. You win!');
+        return 'You win! Paper beats Rock!'
     } else if (playerSelection === 'scissors' && computerSelection === 'Paper') {
         playerScore += 1;
         alert('You picked scissors, Computer picked paper. You win!');
         return 'You win! Scissors beats Paper!';
     } else if (computerSelection === 'Rock' && playerSelection === 'scissors') {
         computerScore += 1;
+        alert('You picked scissors, Computer picked rock. You lose!');
         return 'You lose! Rock beats Scissors!';
     } else if (computerSelection === 'Paper' && playerSelection === 'rock') {
         computerScore += 1;
+        alert('You picked paper, Computer picked rock. You lose!');
         return 'You lose! Paper beats Rock!';
     } else if (computerSelection === 'Scissors' && playerSelection === 'paper') {
         computerScore += 1;
@@ -59,7 +63,9 @@ rockButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice();
     const playerSelection = 'rock';
     console.log(playRound(playerSelection, computerSelection));
-})
+    console.log(`Player score: ${playerScore}.`);
+    console.log(`Computer score: ${computerScore}.`);
+});
 
 
 
