@@ -14,12 +14,13 @@ function playRound(playerSelection, computerSelection) {
     playerSelection.toLowerCase();
     if (playerSelection === 'rock' && computerSelection === 'Scissors') {
         playerScore += 1;
-        return 'You win! Rock beats Scissors!';
+        alert('You picked rock, Computer picked scissors. You win!');
     } else if (playerSelection === 'paper' && computerSelection === 'Rock') {
         playerScore += 1;
-        return 'You win! Paper beats Rock!';
+        alert('You picked paper, Computer picked rock. You win!')
     } else if (playerSelection === 'scissors' && computerSelection === 'Paper') {
         playerScore += 1;
+        alert('You picked scissors, Computer picked paper. You win!');
         return 'You win! Scissors beats Paper!';
     } else if (computerSelection === 'Rock' && playerSelection === 'scissors') {
         computerScore += 1;
@@ -48,20 +49,19 @@ function winner() {
     }
 }
 
-//plays the game 5 times
-function game() {
-    for (let i = 0; i < 5; i++) {
-        playerSelection = prompt("Please enter Rock, Paper, or Scissors: ", '');
-        computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-        console.log(`Your score: ${playerScore}`);
-        console.log(`Computer score: ${computerScore}`);
-    }
-    winner()
-}
+//selectors
+const rockButton = document.querySelector('.rockbutton');
+const paperButton = document.querySelector('.paperbutton');
+const scissorsButton = document.querySelector('.scissorsbutton');
 
-//calls the game
-game();
+//events
+rockButton.addEventListener('click', () => {
+    const computerSelection = getComputerChoice();
+    const playerSelection = 'rock';
+    console.log(playRound(playerSelection, computerSelection));
+})
+
+
 
 
 
