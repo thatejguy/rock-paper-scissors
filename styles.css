@@ -1,0 +1,16 @@
+* {
+  margin: 0px;
+  padding: 10px;
+}
+
+body {
+  display: flex;
+  height: 750px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  gap: 10px;
+}
+
