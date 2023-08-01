@@ -57,8 +57,8 @@ function winner() {
 
 //console.logs the score
 function score() {
-    console.log(`Player score: ${playerScore}.`);
-    console.log(`Computer score: ${computerScore}.`);
+    playerContainer.textContent = `Your score: ${playerScore}.`
+    computerContainer.textContent = `Computer score: ${computerScore}.`
 }
 
 //selectors
@@ -85,6 +85,13 @@ scissorsButton.addEventListener('click', () => {
     console.log(playRound(playerSelection, computerSelection));
     score();
 });
+
+//dom selectors
+const eventContainer = document.querySelector('.event-container');
+const playerContainer = document.querySelector('.player-container');
+const computerContainer = document.querySelector('.computer-container');
+
+
 
 
 
