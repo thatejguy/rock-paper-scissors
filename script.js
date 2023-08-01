@@ -8,7 +8,6 @@ function getComputerChoice() {
 //keeps track of scores
 let playerScore = 0;
 let computerScore = 0;
-let roundScore = 0;
 
 //plays a single game of rock paper scissors
 function playRound(playerSelection, computerSelection) {
