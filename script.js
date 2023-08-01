@@ -8,6 +8,7 @@ function getComputerChoice() {
 //keeps track of scores
 let playerScore = 0;
 let computerScore = 0;
+let roundScore = 0;
 
 //plays a single game of rock paper scissors
 function playRound(playerSelection, computerSelection) {
@@ -44,17 +45,6 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-//Keeps track of the winner
-function winner() {
-    if (playerScore > computerScore) {
-        console.log("You win! Absolutely rolled the computa huh?");
-    } else if (computerScore > playerScore) {
-        console.log('You lose! Computa rekt you huh? Trash!');
-    } else {
-        console.log('You tied! Ehhhhhh?!');
-    }
-}
-
 //console.logs the score
 function score() {
     playerContainer.textContent = `Your score: ${playerScore}.`
@@ -72,18 +62,21 @@ rockButton.addEventListener('click', () => {
     const playerSelection = 'rock';
     eventContainer.textContent = playRound(playerSelection, computerSelection);
     score();
+    finalScore();
 });
 paperButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice();
     const playerSelection = 'paper';
     eventContainer.textContent = playRound(playerSelection, computerSelection);
     score();
+    finalScore();
 });
 scissorsButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice();
     const playerSelection = 'scissors';
     eventContainer.textContent = playRound(playerSelection, computerSelection);
     score();
+    finalScore();
 });
 
 //dom selectors
@@ -92,10 +85,21 @@ const playerContainer = document.querySelector('.player-container');
 const computerContainer = document.querySelector('.computer-container');
 const scoreContainer = document.querySelector('.score-container');
 
-//game
+//keeps track of the winner
+function finalScore() {
+    if (playerScore === 5) {
+        scoreContainer.textContent = "You win! Absolutely rolled the computa huh?";
+    } else if (computerScore === 5) {
+        scoreContainer.textContent = 'You lose! Computa rekt you huh? Trash!';
+    } else if (playerScore === 5 && computerScore === 5) {
+        scoreContainer.textContent = 'You tied! Ehhhhhh?!';
+    } else {
+        console.log('test');
+    }
+}
 
 
-//calls muh game
+
 
 
 
