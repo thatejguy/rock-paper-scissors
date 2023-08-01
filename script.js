@@ -70,19 +70,19 @@ const scissorsButton = document.querySelector('.scissorsbutton');
 rockButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice();
     const playerSelection = 'rock';
-    console.log(playRound(playerSelection, computerSelection));
+    eventContainer.textContent = playRound(playerSelection, computerSelection);
     score();
 });
 paperButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice();
     const playerSelection = 'paper';
-    console.log(playRound(playerSelection, computerSelection));
+    eventContainer.textContent = playRound(playerSelection, computerSelection);
     score();
 });
 scissorsButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice();
     const playerSelection = 'scissors';
-    console.log(playRound(playerSelection, computerSelection));
+    eventContainer.textContent = playRound(playerSelection, computerSelection);
     score();
 });
 
@@ -90,6 +90,13 @@ scissorsButton.addEventListener('click', () => {
 const eventContainer = document.querySelector('.event-container');
 const playerContainer = document.querySelector('.player-container');
 const computerContainer = document.querySelector('.computer-container');
+const scoreContainer = document.querySelector('.score-container');
+
+//game
+
+
+//calls muh game
+
 
 
 

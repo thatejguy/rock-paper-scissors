@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 5px;
+  border: 5px solid rebeccapurple;
 }
 
 html,
@@ -16,5 +17,11 @@ body {
 
 .container {
   gap: 10px;
+}
+
+.event-container,
+.player-container,
+.computer-container {
+  padding-left: 0px;
 }
 
