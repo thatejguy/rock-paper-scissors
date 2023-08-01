@@ -61,21 +61,21 @@ rockButton.addEventListener('click', () => {
     const playerSelection = 'rock';
     eventContainer.textContent = playRound(playerSelection, computerSelection);
     score();
-    finalScore();
+    winner();
 });
 paperButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice();
     const playerSelection = 'paper';
     eventContainer.textContent = playRound(playerSelection, computerSelection);
     score();
-    finalScore();
+    winner();
 });
 scissorsButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice();
     const playerSelection = 'scissors';
     eventContainer.textContent = playRound(playerSelection, computerSelection);
     score();
-    finalScore();
+    winner();
 });
 
 //dom selectors
@@ -85,7 +85,7 @@ const computerContainer = document.querySelector('.computer-container');
 const scoreContainer = document.querySelector('.score-container');
 
 //keeps track of the winner
-function finalScore() {
+function winner() {
     if (playerScore === 5) {
         scoreContainer.textContent = "You win! Absolutely rolled the computa huh?";
     } else if (computerScore === 5) {
