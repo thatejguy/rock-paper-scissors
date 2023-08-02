@@ -1,3 +1,6 @@
+//alert player
+alert('First to 5 points wins!');
+
 //randomly returns rock, paper, or scissors
 function getComputerChoice() {
     let values = ['Rock', 'Paper', 'Scissors'];
