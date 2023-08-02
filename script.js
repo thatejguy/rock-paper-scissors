@@ -14,7 +14,6 @@ let computerScore = 0;
 
 //plays a single game of rock paper scissors
 function playRound(playerSelection, computerSelection) {
-    playerSelection.toLowerCase();
     if (playerSelection === 'rock' && computerSelection === 'Scissors') {
         playerScore += 1;
         alert('You picked rock, Computer picked scissors. You win!');
@@ -47,7 +46,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-//console.logs the score
+//puts score in the dom
 function score() {
     playerContainer.textContent = `Your score: ${playerScore}.`
     computerContainer.textContent = `Computer score: ${computerScore}.`
